@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
-
+import Link from "next/link"
 const Hero = () => {
     return (
         <div className="bg-blue-950">
@@ -23,15 +23,15 @@ const Hero = () => {
                                 {/*CTA BTNS */}
                                 <ul className="flex flex-wrap items-center mt-6">
                                     <li>
-                                        <a
+                                        <Link
                                             href="/#"
                                             className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-center text-base font-medium text-white hover:bg-blue-dark lg:px-7"
                                         >
                                             Get Started
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a
+                                        <Link
                                             href="/#"
                                             className="inline-flex items-center justify-center px-5 py-3 text-center text-base font-medium text-gray-50 hover:text-blue-500 dark:text-white"
                                         >
@@ -65,7 +65,7 @@ const Hero = () => {
                                                 </svg>
                                             </span>
                                             Download App
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -75,7 +75,7 @@ const Hero = () => {
                             <div className="lg:ml-auto lg:text-right">
                                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
                                     <img
-                                        src="https://cdn.tailgrids.com/assets/images/marketing/hero/hero-image-01.png"
+                                        src="https://cdn.tailgrids.com/Linkssets/images/marketing/hero/hero-image-01.png"
                                         alt="hero"
                                         className="max-w-full lg:ml-auto"
                                     />
@@ -129,9 +129,9 @@ export default Hero;
 const SingleImage = ({ href, imgSrc }: { href: string, imgSrc: string }) => {
     return (
         <>
-            <a href={href} className="flex w-full items-center justify-center">
+            <Link href={href} className="flex w-full items-center justify-center">
                 <img src={imgSrc} alt="brand image" className="h-10 w-full" />
-            </a>
+            </Link>
         </>
     );
 };
